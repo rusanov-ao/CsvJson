@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.opencsv.CSVReader;
 import com.opencsv.bean.ColumnPositionMappingStrategy;
 import com.opencsv.bean.CsvToBean;
@@ -17,6 +19,10 @@ public class Main {
         String fileName = "data.csv";
 
         List<Employee> list = parseCSV(columnMapping, fileName);
+
+
+        GsonBuilder builder = new GsonBuilder();
+        Gson gson = builder.create();
     }
 
 
